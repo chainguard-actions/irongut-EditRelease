@@ -8,10 +8,10 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v1.0.0 | [`v1.0.0`](https://github.com/chainguard-actions/EditRelease/tree/v1.0.0) | — |
-| v1.1.0 | [`v1.1.0`](https://github.com/chainguard-actions/EditRelease/tree/v1.1.0) | — |
-| v1.1.0-beta | [`v1.1.0-beta`](https://github.com/chainguard-actions/EditRelease/tree/v1.1.0-beta) | — |
-| v1.2.0 | [`v1.2.0`](https://github.com/chainguard-actions/EditRelease/tree/v1.2.0) | — |
+| v1.0.0 | [`v1.0.0`](https://github.com/chainguard-actions/irongut--EditRelease/tree/v1.0.0) | — |
+| v1.1.0 | [`v1.1.0`](https://github.com/chainguard-actions/irongut--EditRelease/tree/v1.1.0) | — |
+| v1.1.0-beta | [`v1.1.0-beta`](https://github.com/chainguard-actions/irongut--EditRelease/tree/v1.1.0-beta) | — |
+| v1.2.0 | [`v1.2.0`](https://github.com/chainguard-actions/irongut--EditRelease/tree/v1.2.0) | — |
 
 ## Privacy
 
