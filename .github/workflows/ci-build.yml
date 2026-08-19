@@ -1,0 +1,29 @@
+name: CI Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: CI Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
+
+    - name: Setup .Net
+      uses: actions/setup-dotnet@871f041373faaad213a635d9afb62905ec029bbb # v1
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore src/EditRelease.sln
+
+    - name: Build EditRelease
+      run: dotnet build src/EditRelease.sln --configuration Release --no-restore

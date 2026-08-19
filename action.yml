@@ -45,7 +45,7 @@ inputs:
     default: '1'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/irongut/editrelease@sha256:4a43be223b763c2285198789ad351887b3140cdacf0ac1c01a13e1ff7f66d41b' # v1.1.0-beta
+  image: 'docker://ghcr.io/irongut/editrelease:v1.1.0-beta@sha256:4a43be223b763c2285198789ad351887b3140cdacf0ac1c01a13e1ff7f66d41b'
   args:
     - '--token'
     - ${{ inputs.token }}
