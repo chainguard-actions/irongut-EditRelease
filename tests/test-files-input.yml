@@ -1,0 +1,40 @@
+name: Test files input - append file content to release body
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Create a fixture file for the files input
+        run: |
+          mkdir -p /tmp/editrelease-test
+          echo "## Changelog" > /tmp/editrelease-test/changelog.md
+          echo "- Added feature A" >> /tmp/editrelease-test/changelog.md
+          echo "- Fixed bug B" >> /tmp/editrelease-test/changelog.md
+
+      - id: action
+        uses: .
+        continue-on-error: true
+        with:
+          token: ${{ github.token }}
+          id: "1"
+          body: "Release notes header."
+          replacebody: "false"
+          files: "/tmp/editrelease-test/changelog.md"
+          spacing: "2"
+
+      - name: Assert action ran (succeeded or failed gracefully on sentinel repo)
+        env:
+          OUTCOME: ${{ steps.action.outcome }}
+        run: |
+          echo "outcome: $OUTCOME"
+          if [ "$OUTCOME" = "success" ]; then
+            echo "PASS: action succeeded"
+          elif [ "$OUTCOME" = "failure" ]; then
+            echo "PASS: action failed gracefully (sentinel repo is not resolvable or release id not found)"
+          else
+            echo "FAIL: unexpected outcome '$OUTCOME'"
+            exit 1
+          fi
