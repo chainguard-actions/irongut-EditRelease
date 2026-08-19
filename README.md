@@ -12,6 +12,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 | v1.1.0 | [`v1.1.0`](https://github.com/chainguard-actions/irongut-EditRelease/tree/v1.1.0) | — |
 | v1.1.0-beta | [`v1.1.0-beta`](https://github.com/chainguard-actions/irongut-EditRelease/tree/v1.1.0-beta) | — |
 | v1.2.0 | [`v1.2.0`](https://github.com/chainguard-actions/irongut-EditRelease/tree/v1.2.0) | — |
+| v1.2.1-alpha | [`v1.2.1-alpha`](https://github.com/chainguard-actions/irongut-EditRelease/tree/v1.2.1-alpha) | [`e4d04dc`](https://github.com/irongut/EditRelease/commit/e4d04dc81b39b40865f519d0236997c5f4181146) |
 
 ## Privacy
 
